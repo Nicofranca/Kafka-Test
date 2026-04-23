@@ -1,3 +1,19 @@
+# src/main/resources/application.yml
+server:
+ port: 8081
 spring:
-  application:
-    name: sensor-ingestion-service
+    application:
+      name: sensor-ingestion-service
+    kafka:
+      producer:
+        bootstrap-servers: localhost:9094 # 9094 = acesso externo ao Docker
+        key-serializer: org.apache.kafka.common.serialization.StringSerializer
+        value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+        acks: all
+        retries: 3
+        properties:
+          spring.json.add.type.headers: false
+
+topics:
+ sensor-leitura: producao.sensor.leitura
+ maquina-parada: producao.maquina.parada

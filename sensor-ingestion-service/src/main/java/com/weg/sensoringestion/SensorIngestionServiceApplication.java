@@ -1,4 +1,4 @@
-package com.weg.sensor_ingestion_service;
+package com.weg.sensoringestion;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
