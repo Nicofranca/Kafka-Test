@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 public class KafkaProducerService {
     private final KafkaTemplate<String, SensorLeituraEvent> kafkaTemplate;
 
-    @Value("${topics.sensor-leitura}")
+    @Value("${topics.sensor-leitura:producao.sensor.leitura}")
     private String topico;
 
     public void publicarLeitura(SensorLeituraEvent evento) {
