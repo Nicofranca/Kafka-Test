@@ -1,0 +1,2 @@
+[2026-04-30T19:08:14.340Z] INFO: Alert Service conectado ao Kafka
+[2026-04-30T19:08:14.352Z] ERROR: Falha fatal: This server does not host this topic-partition
